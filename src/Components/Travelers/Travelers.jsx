@@ -9,7 +9,7 @@ import dubai from '../../assets/dubai.jpg'
 import traveler1 from '../../assets/pallavi1.jpg'
 import traveler2 from '../../assets/pushkar.jpg'
 import traveler3 from '../../assets/bhaskar.jpeg'
-import traveler4 from '../../assets/aasma1.jpg'
+import traveler4 from '../../assets/logo.ico'
 
 //import AOS
 import Aos from 'aos'
@@ -46,8 +46,8 @@ const travelers = [
     id:4,
     destinationImage:dubai,
     travelerImage:traveler4,
-    travelername:'AASMA JI🥰',
-    socialLink:'@aasma ji'
+    travelername:'LOGO',
+    socialLink:'@logo'
   },
 ]
 const Travelers = () => {
