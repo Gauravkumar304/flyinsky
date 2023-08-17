@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-
+import SignInSide from './Signin'
 // imported icons 
 import {SiConsul} from 'react-icons/si'
 import {BsPhoneVibrate} from 'react-icons/bs'
@@ -13,6 +13,8 @@ const Navbar = () => {
 
 //let us remove the navbar in small width screen
 const[active,setActive] = useState('navBarMenu')
+const [isSignInActive,setSignInActive]=useState(false)
+
 const showNavBar = ()=> {
   setActive('navBarMenu showNavBar')
 }
@@ -39,7 +41,7 @@ window.addEventListener('scroll',addBgColor)
 
   return (
     <div className='navBar flex'> 
-
+    {isSignInActive && <SignInSide/>}
     <div className="navBarOne flex">
       <div>
       <SiConsul   className='icon'/>
@@ -50,10 +52,9 @@ window.addEventListener('scroll',addBgColor)
       </div>
 
       <div className="atb flex">
-         <span className='abc'> Sign In </span>  {/*className abc by me */}
+         <span className='abc' onClick={()=>{setSignInActive(prev=>!prev)}}> Sign In </span>  {/*className abc by me */}
         <span className='abc'> Sign Out </span>
       </div>
-
 
      </div> 
 
@@ -63,7 +64,7 @@ window.addEventListener('scroll',addBgColor)
         </div> 
         <div className={active}>
           <ul className="menu flex">
-            <li onClick={removeNavBar} className="listItem">Home</li>
+            <li onClick={removeNavBar} className="listItem"><a href="#homeid">Home</a></li>
             <li onClick={removeNavBar} className="listItem">About</li>
             <li onClick={removeNavBar} className="listItem">Offers</li>
             <li onClick={removeNavBar} className="listItem">Seats</li>

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 
 // import Assest
-import video from '../../assets/video1.mp4'
+import Video from '../../assets/video1.mp4'
 import aeroplane from '../../assets/takeoff.png'
 
 //import AOS
@@ -15,7 +15,7 @@ const Home =() =>{
   }, [] )
 
   return (
-      <div className="home flex container">
+      <div className="home flex container" id='homeid'>
 
         <div className="mainText">
         <h1 data-aos='fade-up' data-aos-duration='2500' > Create ever-lasting memories with us</h1>
@@ -24,9 +24,10 @@ const Home =() =>{
       <div data-aos='fade-down' data-aos-duration='2500' className="homeImages flex">
 
         <div className="videoDiv">
-          <video src={video} autoplay muted loop   className='video'></video>
+          <video src={Video} autoPlay muted loop className='video'>
+          </video>
         </div>
-
+        {/* src={Video} autoplay muted loop  */}
         {/*  "src\assets\video.mp4"  {video} autoplay muted loop*/}
         <img src={aeroplane} className='plane'  />
 
