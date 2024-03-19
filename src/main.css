@@ -1222,3 +1222,7 @@ h2{
     background: var(--PrimaryColor);
     border-radius: 10px;
 }
+
+.someUniqueSelector {
+    display: flex;
+}
